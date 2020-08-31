@@ -46,8 +46,6 @@ export class TableTodo extends LitElement {
             this.list.forEach((t, id) => { if(t['id'] == idToDo) idTemp = id; });
             this.list.splice(idTemp, 1);
 
-            console.log(`${idTemp} - ${this.list}`)
-
             if(this.list.length < 1) this.list = [];
             this.updateToDo();
         }
