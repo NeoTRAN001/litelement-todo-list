@@ -14,7 +14,10 @@ export class TodoListLit extends LitElement {
     super();
 
     this.atodo = ''
-    this.addEventListener('AddToDo', (e) => { this.atodo = e.detail.content; });
+    this.addEventListener('AddToDo', (e) => { 
+      this.atodo = e.detail.content;
+      setTimeout(() => { this.atodo = '' }, 50);
+    });
   }
   
   static get styles() {
