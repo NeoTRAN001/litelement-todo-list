@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "storybook": "start-storybook",
+    "storybook:build": "build-storybook",
+    "start": "es-dev-server --app-index index.html --node-resolve --open --watch"
+  },
+  "devDependencies": {
+    "@open-wc/demoing-storybook": "^2.0.0",
+    "es-dev-server": "^1.5.0"
+  },
+  "name": "todo-list-lit",
+  "version": "0.0.0",
+  "description": "Webcomponent todo-list-lit following open-wc recommendations",
+  "author": "todo-list-lit",
+  "license": "MIT",
+  "dependencies": {
+    "@polymer/paper-button": "^3.0.1",
+    "@polymer/paper-card": "^3.0.1",
+    "@polymer/paper-input": "^3.2.1",
+    "lit-element": "^2.0.1",
+    "lit-html": "^1.0.0"
+  }
+}
