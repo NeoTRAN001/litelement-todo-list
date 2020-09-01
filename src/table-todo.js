@@ -32,10 +32,7 @@ export class TableTodo extends LitElement {
             if(!(this.list.length < 1))
                 this.list.forEach( aToDo => { if(aToDo['id'] > newId) newId = aToDo['id']; });
 
-            this.list = [
-                ...this.list,
-                { content, id: newId + 1 },
-            ];
+            this.list = [ ...this.list, { content, id: newId + 1 }];
         }
     }
 
@@ -91,9 +88,7 @@ export class TableTodo extends LitElement {
             <paper-card>
                 <div class="card-content headerCard">
                     <p>ToDo List by Polymer 2</p>
-                    <paper-button  @click=${() => this.deleteToDo(null)}>
-                        <img class="imgRequired" src="https://raw.githubusercontent.com/NeoTRAN001/Svelte-TodoList-build/master/public/img/reBin.png" alt="">
-                    </paper-button>
+                    <paper-button  @click=${() => this.deleteToDo(null)}><img class="imgRequired" src="https://raw.githubusercontent.com/NeoTRAN001/Svelte-TodoList-build/master/public/img/reBin.png" alt=""></paper-button>
                 </div>
                 <div class="card-content">
                     ${ this.list.length <= 0 
@@ -108,8 +103,7 @@ export class TableTodo extends LitElement {
                                 <paper-card>
                                     <div class="card-content aToDo">
                                         <p class="text-content"> ${item.content }</p>
-                                        <button value="${item.id}" @click=${() => this.deleteToDo(item)} class="buttonDelete">X</button>
-                                        
+                                        <button value="${item.id}" @click=${() => this.deleteToDo(item)} class="buttonDelete">X</button>               
                                     </div>
                                 </paper-card>
                         `)
