@@ -21,7 +21,7 @@ export class HeaderLogo extends LitElement {
     render() {
         return html`
             <center>
-                <img src="https://raw.githubusercontent.com/NeoTRAN001/polymer-todo-list-firebase/master/img/ico-logo.png" alt="">
+                <img src="https://raw.githubusercontent.com/NeoTRAN001/Svelte-TodoList-build/master/public/img/ico-logo.png" alt="">
                 <h2>FrontEnd Test LitElement</h2>
             </center>
         `;
