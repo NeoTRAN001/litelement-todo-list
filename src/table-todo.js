@@ -22,10 +22,10 @@ export class TableTodo extends LitElement {
 
     attributeChangedCallback(name, oldVal, newVal) {
         super.attributeChangedCallback(name, oldVal, newVal);
-        if(name == 'todo') this.addToDoInList(newVal);
+        if(name == 'todo') this._addToDoInList(newVal);
     }
 
-    addToDoInList(content) {
+    _addToDoInList(content) {
         if(content != '' && content != null) {
             let newId = -1;
     
@@ -36,7 +36,7 @@ export class TableTodo extends LitElement {
         }
     }
 
-    deleteToDo(todo) {
+    _deleteToDo(todo) {
         if(todo != null) this.list = this.list.filter(e => e !== todo);
         else this.list = [];
     }
@@ -88,7 +88,7 @@ export class TableTodo extends LitElement {
             <paper-card>
                 <div class="card-content headerCard">
                     <p>ToDo List by Polymer 2</p>
-                    <paper-button  @click=${() => this.deleteToDo(null)}><img class="imgRequired" src="https://raw.githubusercontent.com/NeoTRAN001/Svelte-TodoList-build/master/public/img/reBin.png" alt=""></paper-button>
+                    <paper-button  @click=${() => this._deleteToDo(null)}><img class="imgRequired" src="https://raw.githubusercontent.com/NeoTRAN001/Svelte-TodoList-build/master/public/img/reBin.png" alt=""></paper-button>
                 </div>
                 <div class="card-content">
                     ${ this.list.length <= 0 
@@ -103,7 +103,7 @@ export class TableTodo extends LitElement {
                                 <paper-card>
                                     <div class="card-content aToDo">
                                         <p class="text-content"> ${item.content }</p>
-                                        <button value="${item.id}" @click=${() => this.deleteToDo(item)} class="buttonDelete">X</button>               
+                                        <button value="${item.id}" @click=${() => this._deleteToDo(item)} class="buttonDelete">X</button>               
                                     </div>
                                 </paper-card>
                         `)
